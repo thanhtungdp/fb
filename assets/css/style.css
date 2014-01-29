@@ -1,0 +1,78 @@
+body, button, input, label, select, td, textarea{
+	font-family: 'lucida grande',tahoma,verdana,arial,sans-serif;
+	font-size: 11px;
+}
+a{
+	color:#3b5998;
+}
+header{
+	height:60px;
+	background: #3b5998;
+	padding-top:10px;
+}
+header img{
+	height:40px;
+}
+#content{
+	margin-top:20px;
+}
+.login{
+	width:640px;
+	margin-left: auto;
+	margin-right: auto;
+	border:1px solid #ccc;
+	padding:20px;
+}
+.login h4{
+	border-bottom: 1px solid #ccc;
+	padding-bottom: 10px;
+}
+#alert{
+	padding:10px;
+	border:1px solid #dd3c10;
+	background: #ffebe8
+}
+#frmlogin{
+	margin-left: auto;
+	margin-right: auto;
+	width:400px;
+}
+label{
+	color:#666;
+	font-weight: bold;
+	float:left;
+	width:100px;
+	line-height: 1.4em
+}
+#frmlogin div{
+	margin-top:20px;
+}
+#frmlogin input{
+	border:1px solid #bdc7d8;
+	padding:3px;
+}
+.ext{
+	margin-left: 100px
+}
+
+footer .container{
+	margin-top:50px;
+	margin-bottom: 20px;
+	border-top:1px solid #ccc;
+	padding-top:5px;
+}
+input[type=submit]{
+	font-weight: bold;
+	padding:8px !important;
+	background:#3b5998;
+	color:#fff;
+}
+.clearfix:after {
+clear: both;
+content: ".";
+display: block;
+font-size: 0;
+height: 0;
+line-height: 0;
+visibility: hidden;
+}

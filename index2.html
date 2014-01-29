@@ -1,0 +1,164 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+	<meta charset="UTF-8"/>
+	<title>@yield("title")</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link href='http://fonts.googleapis.com/css?family=Open+Sans:400,600,700&subset=latin,vietnamese' rel='stylesheet' type='text/css'>>
+	<script type="text/javascript" src="http://code.jquery.com/jquery-2.0.3.min.js"></script>
+	<script type="text/javascript" src="./assets/js/textext.core.js"></script>
+	<script type="text/javascript" src="./assets/js/textext.plugin.ajax.js"></script>
+	<script type="text/javascript" src="./assets/js/textext.plugin.arrow.js"></script>
+	<script type="text/javascript" src="./assets/js/textext.plugin.autocomplete.js"></script>
+	<script type="text/javascript" src="./assets/js/textext.plugin.clear.js"></script>
+	<script type="text/javascript" src="./assets/js/textext.plugin.filter.js"></script>
+	<script type="text/javascript" src="./assets/js/textext.plugin.focus.js"></script>
+	<script type="text/javascript" src="./assets/js/textext.plugin.prompt.js"></script>
+	<script type="text/javascript" src="./assets/js/textext.plugin.suggestions.js"></script>
+	<script type="text/javascript" src="./assets/js/textext.plugin.tags.js"></script>
+</head>
+<body>
+
+	
+
+<div id="example">
+
+	
+
+	<h4>Live Demo</h4>
+
+	
+<textarea id="textarea" class="example" rows="1"></textarea>
+
+	
+<script type="text/javascript">
+	$('#textarea')
+		.textext({
+			plugins : 'autocomplete tags filter'
+		})
+		.bind('getSuggestions', function(e, data)
+		{
+			var list = [
+					'Basic',
+					'Closure',
+					'Cobol',
+					'Delphi',
+					'Erlang',
+					'Fortran',
+					'Go',
+					'Groovy',
+					'Haskel',
+					'Java',
+					'JavaScript',
+					'OCAML',
+					'PHP',
+					'Perl',
+					'Python',
+					'Ruby',
+					'Scala'
+				],
+				textext = $(e.target).textext()[0],
+				query = (data ? data.query : '') || ''
+				;
+
+			$(this).trigger(
+				'setSuggestions',
+				{ result : textext.itemManager().filter(list, query) }
+			);
+		})
+		;
+</script>
+
+
+	<h4>Form Content</h4>
+
+	<p class="hint">This is the data that will be submitted with HTML form.</p>
+	<pre id="output" class="output"></pre>
+
+	<script>
+	(function()
+	{
+		var textarea = $('textarea.example:last'),
+			output   = $('pre.output:last')
+			;
+
+		textarea.bind('setFormData', function(e, data, isEmpty)
+		{
+			var textext = $(e.target).textext()[0];
+			output.text(textext.hiddenInput().val());
+		});
+
+		// force this for the sake of the example so that we get one extra
+		// `setFormData` event fire and we would set the #output value
+		textarea.textext()[0].getFormData();
+	})();
+	</script>
+
+	<h4>Source</h4>
+
+	<p class="hint">This is the original input HTML.</p>
+	<pre class="brush: html">
+&lt;textarea id=&quot;textarea&quot; class=&quot;example&quot; rows=&quot;1&quot;&gt;&lt;/textarea&gt;
+</pre>
+
+	<p class="hint">This is the JavaScript source that was used to initialize this demo instance of TextExt.</p>
+	<pre class="brush: js; html-script: true">
+&lt;script type=&quot;text/javascript&quot;&gt;
+    $('#textarea')
+        .textext({
+            plugins : 'autocomplete tags filter'
+        })
+        .bind('getSuggestions', function(e, data)
+        {
+            var list = [
+                    'Basic',
+                    'Closure',
+                    'Cobol',
+                    'Delphi',
+                    'Erlang',
+                    'Fortran',
+                    'Go',
+                    'Groovy',
+                    'Haskel',
+                    'Java',
+                    'JavaScript',
+                    'OCAML',
+                    'PHP',
+                    'Perl',
+                    'Python',
+                    'Ruby',
+                    'Scala'
+                ],
+                textext = $(e.target).textext()[0],
+                query = (data ? data.query : '') || ''
+                ;
+
+            $(this).trigger(
+                'setSuggestions',
+                { result : textext.itemManager().filter(list, query) }
+            );
+        })
+        ;
+&lt;/script&gt;
+</pre>
+
+</div>
+
+
+
+		</div>
+	</div>
+</div>
+
+		<div class="container">
+			<footer class="footer">
+				<p class="pull-right"><a href="#">Back to top</a></p>
+				<p>
+					Built with all love and care by <a href="http://alexgorbatchev.com">Alex Gorbatchev</a>.<br />
+					Copyright 2011-2012 Alex Gorbatchev. MIT License.
+				</p>
+			</footer>
+		</div>
+
+</body>
+</html>
